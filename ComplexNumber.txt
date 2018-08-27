@@ -1,0 +1,31 @@
+import java.util.Scanner;
+class Number
+{
+	Scanner sc = new Scanner(System.in);
+	
+	private int real;
+	private int img;
+	
+	void setNumber()
+	{
+		System.out.println("Enter real part: ");
+		real = sc.nextInt();
+		System.out.println("Enter imaginary part: ");
+		img = sc.nextInt();
+	}
+	
+	void Display()
+	{
+		System.out.print("Complex number: ");
+		System.out.println(real + "+" + img + "i");
+	}
+}
+public class ComplexNumber
+{
+	public static void main(String[] x)
+	{
+		Number obj = new Number();
+		obj.setNumber();
+		obj.Display();
+	}
+}
