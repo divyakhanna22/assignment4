@@ -1,0 +1,42 @@
+import java.util.Scanner;
+public class Waveform
+{
+	public static void main(String args[])
+	{
+		int arr[] = new int[10];
+		int temp, temp2;
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter array: ");
+		for(int i=0;i<10;i++)
+		{
+			arr[i]=sc.nextInt();
+		}
+		System.out.println("Array: ");
+		for(int i=0;i<10;i++)
+		{
+			System.out.print(arr[i] + " ");
+		}
+		for(int i=0;i<10;i++)
+		{
+			for(int j=0;j<9-i;j++)
+			{
+				if(arr[j]>arr[j+1])
+				{
+					temp=arr[j];
+					arr[j]=arr[j+1];
+					arr[j+1]=temp;
+				}
+			}
+		}
+		for(int i=0;i<10;i=i+2)
+		{
+			temp2=arr[i+1];
+			arr[i+1]=arr[i];
+			arr[i]=temp2;
+		}
+		for(int i=0;i<10;i++)
+		{
+			System.out.print(arr[i]+" ");
+		}
+	}
+}
